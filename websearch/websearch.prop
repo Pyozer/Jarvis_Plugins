@@ -1,0 +1,8 @@
+{
+  "modules" : { 
+    "websearch"  : {
+      "description": "Sarah lance une recherche sur internet",
+      "version"    : "2.1"
+    }
+  }
+}

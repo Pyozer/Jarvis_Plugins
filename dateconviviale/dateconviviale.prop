@@ -1,0 +1,10 @@
+{
+  "modules" : { 
+    "dateconviviale"  : {
+      "description": "Jarvis donne la date dans un format convivial.",
+      "version"    : "1.2",
+	  "Donne_heure": "non",
+      "Rappel_calendrier": "non"
+    }
+  }
+}

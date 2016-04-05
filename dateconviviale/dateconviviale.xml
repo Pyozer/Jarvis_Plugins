@@ -1,0 +1,25 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleDateConviviale" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleDateConviviale" scope="public">
+    <example>Jarvis quelle date sommes-nous ?</example>
+    <tag>out.action=new Object(); </tag>
+
+    <item weight="2">Jarvis</item>
+
+    <one-of>
+      <item>quelle date sommes-nous</item>
+      <item>quelle date sommes nous</item>
+      <item>quel jour sommes-nous</item>
+      <item>quel jour on est</item>
+      <item>quelle est la date</item>
+      <item>quelle est la date d'aujourd'hui</item>
+      <item>quelle date aujourd'hui</item>
+      <item>on est quand</item>
+      <item>on est quel jour</item>
+      <item>donne moi la date</item>
+      <item>donne moi la date d'aujourd'hui</item>
+      <item>je ne sais plus quel jour on est</item>
+      <item>je ne sais plus quelle date on est</item>
+    </one-of>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/dateconviviale";</tag>
+  </rule>
+</grammar>

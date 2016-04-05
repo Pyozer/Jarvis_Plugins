@@ -1,0 +1,9 @@
+{
+  "modules" : { 
+    "HeureCoucher"  : {
+      "description": "Défini, donne, vérifie l'heure de coucher défini",
+      "name": "monsieur",
+      "version": "1.0"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "modules": { 
+    "presentation": {
+      "description": "Jarvis se presente",
+      "phrase": "Je m'appelle Jarvis, je suis une sorte d'intelligence artificielle, connectée à internet. Je réagis aux requètes vocales et même gestuelles. Je suis aussi doté d'une reconnaissance facial.",
+      "version": "1.1"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleProgTV2" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleProgTV2" scope="public">
+    <example>Jarvis quel est le programme télé ?</example>
+    <tag>out.action=new Object(); </tag>
+    <item>Jarvis</item>
+
+    <one-of>
+      <item>quel est le programme télé</item>
+      <item>qu'est ce qu'il y a à la télé</item>
+      <item>il y a quoi à la télé</item>
+    </one-of>
+
+    <item repeat="0-1">
+      <one-of>
+        <item>ce soir<tag>out.action.period="soiree"</tag></item>
+        <item>en ce moment<tag>out.action.period="actuellement"</tag></item>
+        <item>lundi<tag>out.action.period="lundi"</tag></item>
+        <item>mardi<tag>out.action.period="mardi"</tag></item>
+        <item>mercredi<tag>out.action.period="mercredi"</tag></item>
+        <item>jeudi<tag>out.action.period="jeudi"</tag></item>
+        <item>vendredi<tag>out.action.period="vendredi"</tag></item>
+        <item>samedi<tag>out.action.period="samedi"</tag></item>
+        <item>dimanche<tag>out.action.period="dimanche"</tag></item>
+      </one-of>
+    </item>
+
+    <item repeat="0-1">
+      <item>sur </item>
+      <one-of>
+        <!-- tnt -->
+        <item>la un<tag>out.action.chaine=1; out.action.bouquet="tnt"</tag></item>
+        <item>TF un<tag>out.action.chaine=1; out.action.bouquet="tnt"</tag></item>
+        <item>la deux<tag>out.action.chaine=2; out.action.bouquet="tnt"</tag></item>
+        <item>France deux<tag>out.action.chaine=2; out.action.bouquet="tnt"</tag></item>
+        <item>la trois<tag>out.action.chaine=3; out.action.bouquet="tnt"</tag></item>
+        <item>France trois<tag>out.action.chaine=3; out.action.bouquet="tnt"</tag></item>
+        <item>la quatre<tag>out.action.chaine=4; out.action.bouquet="tnt"</tag></item>
+        <item>canal plus<tag>out.action.chaine=4; out.action.bouquet="tnt"</tag></item>
+        <item>la cinq<tag>out.action.chaine=5; out.action.bouquet="tnt"</tag></item>
+        <item>arté<tag>out.action.chaine=5; out.action.bouquet="tnt"</tag></item>
+        <item>la six<tag>out.action.chaine=6; out.action.bouquet="tnt"</tag></item>
+        <item>M6<tag>out.action.chaine=6; out.action.bouquet="tnt"</tag></item>
+        <item>la sept<tag>out.action.chaine=7; out.action.bouquet="tnt"</tag></item>
+        <item>France cinq<tag>out.action.chaine=7; out.action.bouquet="tnt"</tag></item>
+        <item>la huit<tag>out.action.chaine=8; out.action.bouquet="tnt"</tag></item>
+        <item>D8<tag>out.action.chaine=8; out.action.bouquet="tnt"</tag></item>
+        <item>la neuf<tag>out.action.chaine=9; out.action.bouquet="tnt"</tag></item>
+        <item>W9<tag>out.action.chaine=9; out.action.bouquet="tnt"</tag></item>
+        <item>la dix<tag>out.action.chaine=10; out.action.bouquet="tnt"</tag></item>
+        <item>TMC<tag>out.action.chaine=10; out.action.bouquet="tnt"</tag></item>
+        <item>la onze<tag>out.action.chaine=11; out.action.bouquet="tnt"</tag></item>
+        <item>NT1<tag>out.action.chaine=11; out.action.bouquet="tnt"</tag></item>
+        <item>la douze<tag>out.action.chaine=12; out.action.bouquet="tnt"</tag></item>
+        <item>énergie douze<tag>out.action.chaine=12; out.action.bouquet="tnt"</tag></item>
+        <item>la treize<tag>out.action.chaine=13; out.action.bouquet="tnt"</tag></item>
+        <item>LCP<tag>out.action.chaine=13; out.action.bouquet="tnt"</tag></item>
+        <item>la quatorze<tag>out.action.chaine=14; out.action.bouquet="tnt"</tag></item>
+        <item>France quatre<tag>out.action.chaine=14; out.action.bouquet="tnt"</tag></item>
+        <item>la quinze<tag>out.action.chaine=15; out.action.bouquet="tnt"</tag></item>
+        <item>BFM<tag>out.action.chaine=15; out.action.bouquet="tnt"</tag></item>
+        <item>la seize<tag>out.action.chaine=16; out.action.bouquet="tnt"</tag></item>
+        <item>i télé<tag>out.action.chaine=16; out.action.bouquet="tnt"</tag></item>
+        <item>la dix-sept<tag>out.action.chaine=17; out.action.bouquet="tnt"</tag></item>
+        <item>D17<tag>out.action.chaine=17; out.action.bouquet="tnt"</tag></item>
+        <item>la dix-huit<tag>out.action.chaine=18; out.action.bouquet="tnt"</tag></item>
+        <item>gulli<tag>out.action.chaine=18; out.action.bouquet="tnt"</tag></item>
+        <item>la dix-neuf<tag>out.action.chaine=19; out.action.bouquet="tnt"</tag></item>
+        <item>France eau<tag>out.action.chaine=19; out.action.bouquet="tnt"</tag></item>
+        <item>la vingt<tag>out.action.chaine=20; out.action.bouquet="tnt"</tag></item>
+        <item>HD 1<tag>out.action.chaine=20; out.action.bouquet="tnt"</tag></item>
+        <item>la vingt et un<tag>out.action.chaine=21; out.action.bouquet="tnt"</tag></item>
+        <item>l'équipe<tag>out.action.chaine=21; out.action.bouquet="tnt"</tag></item>
+        <item>la vingt deux<tag>out.action.chaine=22; out.action.bouquet="tnt"</tag></item>
+        <item>sister<tag>out.action.chaine=22; out.action.bouquet="tnt"</tag></item>
+        <item>la vingt trois<tag>out.action.chaine=23; out.action.bouquet="tnt"</tag></item>
+        <item>la vingt quatre<tag>out.action.chaine=24; out.action.bouquet="tnt"</tag></item>
+        <item>RMC découverte<tag>out.action.chaine=24; out.action.bouquet="tnt"</tag></item>
+        <item>la ving cinq<tag>out.action.chaine=25; out.action.bouquet="tnt"</tag></item>
+        <item>Chérie 25<tag>out.action.chaine=25; out.action.bouquet="tnt"</tag></item>
+
+        <!-- belgique-suisse -->
+        <item>RTL TVI<tag>out.action.chaine=32; out.action.bouquet="belgique-suisse"</tag></item>
+        
+        <!-- tnt-locale -->
+        <item>NRJ Paris<tag>out.action.chaine=36; out.action.bouquet="tnt-locale"</tag></item>
+        
+        <!-- generaliste -->
+        <item>TV5MONDE<tag>out.action.chaine=52; out.action.bouquet="generaliste"</tag></item>
+
+        <!-- canal-tps -->
+        <item>Canal+<tag>out.action.chaine=58; out.action.bouquet="canal-tps"</tag></item>
+
+        <!-- cinema -->
+        <item>Action<tag>out.action.chaine=79; out.action.bouquet="cinema"</tag></item>
+
+        <!-- sport -->
+        <item>Eurosport<tag>out.action.chaine=82; out.action.bouquet="sport"</tag></item>
+        <item>beIN Sport 1<tag>out.action.chaine=83; out.action.bouquet="sport"</tag></item>
+        <item>beIN Sport 2<tag>out.action.chaine=84; out.action.bouquet="sport"</tag></item>
+
+        <!-- information_documentaire -->
+        <item>LCI<tag>out.action.chaine=97; out.action.bouquet="information_documentaire"</tag></item>
+
+        <!-- jeunesse -->
+        <item>Nickelodéon<tag>out.action.chaine=118; out.action.bouquet="jeunesse"</tag></item>
+
+        <!-- musique -->
+        <item>MCM Top<tag>out.action.chaine=137; out.action.bouquet="musique"</tag></item>
+      </one-of>
+    </item>
+
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/progtv2";</tag>
+    
+  </rule>  
+</grammar>

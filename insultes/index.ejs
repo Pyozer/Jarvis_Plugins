@@ -1,0 +1,70 @@
+<%- layout('/layout/modal.ejs') -%>
+
+<div class="alert alert-info" role="alert">
+  <h4>Auteur</h4>
+  <p>Frédéric MUNIER</p>
+</div>
+
+<p>
+Ce module permet à SARAH de réagir face aux classiques insultes qu'elle reçoit bizzarement lorsqu'on la présente à quelqu'un.<br>
+Les réponses aux insultes ne peuvent que se faire sur ordre pour éviter les faux positifs.<br>
+La gestion des insultes sont définies dans le fichier grammaire XML lazyinsultes.xml
+</p>
+
+<div class="tab-content">
+<h4>Version 2.0:</h4>
+<pre>
+- compatible avec SARAH V4: plugin conforme en tout point avec le format de Sarah V4
+- Gestion dynamique des grammaires: activation du plugin sur ordre vocale pour supprimer
+  les faux-positfs et de se faire insulter gratuitement...
+</pre>
+
+<h4>Version 1.1:</h4>
+<pre>
+- Mise en place du portlet dans l'interface de Sarah
+</pre>
+
+<h4>Version 1.0:</h4>
+<pre>
+- Première version public
+</pre>
+</div>
+	
+<h4>Commandes Vocales:</h4>
+<p>
+Sarah ne répondra qu'exclusivement aux insultes qu'en activant le plugin, ce mode d'écoute permet de lancer les insultes sans dire Sarah au préalable, ce qui est plus naturel et surtout évite de surcharger les grammaires de Sarah qui générerait rapidement des faux-positifs.
+</p>
+
+<p>
+<strong>Activation du plugin:</strong><br>
+<i>"Sarah, autorisation de répondre aux insultes"</i><br>
+ou<br>
+<i>"Sarah, réponds maintenant aux insultes"</i><br>
+ou<br>
+<i>"Sarah, sois vulgaire"</i><br>
+Réponse:<br>
+<i>"Dorénavant je serais vulgaire et ne répondrais qu'aux insultes"</i>
+</p>
+
+<p>
+Ensuite une insulte peut être lancée:<br>
+<i>"va te faire foutre"</i><br>
+Réponse:<br>
+<i>"je te laisse le soin de trouver mon cyber trou pour cela"</i>
+</p>
+
+<p>
+Ce n'est pas très élégant, je vous l'accorde, mais l'idée est de donner de la répartie à SARAH pour clouer le bec aux impertinents.<br>
+A vous donc de personnaliser vos réponses dans le fichier lazyinsulte.xml car je vous avoue de manquer cruellement d'idée sur ce plan là ;-)
+</p>
+
+<p>
+<strong>Désactivation du plugin:</strong><br>
+<i>"interdiction de répondre aux insultes"</i><br>
+ou<br>
+<i>"arrête de répondre aux insultes"</i><br>
+ou<br>
+<i>"sois polie"</i><br>
+Réponse:<br>
+<i>"Dorénavant je serais polie ne répondrais à plus aucune insulte"</i>
+</p>

@@ -1,0 +1,141 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleminuteur" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+	<rule id="ruleminuteur" scope="public">
+		<example>Jarvis lance le minuteur pour dix minutes</example>
+		<tag>out.action=new Object(); </tag>
+
+		<item>Jarvis</item>
+
+		<one-of>
+			<item>lance compte a reubour a</item>
+			<item>lance compte à reboure a</item>
+			<item>lance compte à reboure de</item>
+			<item>met compte à reboure de</item>
+			<item>met le minuteur a</item>
+			<item>met la minuterie pour</item>
+			<item>lance la minuterie a</item>
+			<item>lance la minuterie pour</item>
+			<item>minuteur a</item>
+			<item>lance compte a reubour pour</item>
+			<item>met le minuteur pour</item>
+			<item>minuteur pour</item>
+			<item>minuteur</item>
+		</one-of>
+		<one-of>
+			<item>zéro<tag>out.action.temps='0';</tag></item>
+			<item>un<tag>out.action.temps='1';</tag></item>
+			<item>une<tag>out.action.temps='1';</tag></item>
+			<item>deux<tag>out.action.temps='2';</tag></item>
+			<item>trois<tag>out.action.temps='3';</tag></item>
+			<item>quatre<tag>out.action.temps='4';</tag></item>
+			<item>cinq<tag>out.action.temps='5';</tag></item>
+			<item>six<tag>out.action.temps='6';</tag></item>
+			<item>sept<tag>out.action.temps='7';</tag></item>
+			<item>huit<tag>out.action.temps='8';</tag></item>
+			<item>neuf<tag>out.action.temps='9';</tag></item>
+			<item>dix<tag>out.action.temps='10';</tag></item>
+			<item>onze<tag>out.action.temps='11';</tag></item>
+			<item>douze<tag>out.action.temps='12';</tag></item>
+			<item>treize<tag>out.action.temps='13';</tag></item>
+			<item>quatorze<tag>out.action.temps='14';</tag></item>
+			<item>quinze<tag>out.action.temps='15';</tag></item>
+			<item>seize<tag>out.action.temps='16';</tag></item>
+			<item>dix-sept<tag>out.action.temps='17';</tag></item>
+			<item>dix-huit<tag>out.action.temps='18';</tag></item>
+			<item>dix-neuf<tag>out.action.temps='19';</tag></item>
+			<item>vingt<tag>out.action.temps='20';</tag></item>
+			<item>vingt-et-un<tag>out.action.temps='21';</tag></item>
+			<item>vingt-deux<tag>out.action.temps='22';</tag></item>
+			<item>vingt-trois<tag>out.action.temps='23';</tag></item>
+			<item>vingt-quatre<tag>out.action.temps='24';</tag></item>
+			<item>vingt-cinq<tag>out.action.temps='25';</tag></item>
+			<item>vingt-six<tag>out.action.temps='26';</tag></item>
+			<item>vingt-sept<tag>out.action.temps='27';</tag></item>
+			<item>vingt-huit<tag>out.action.temps='28';</tag></item>
+			<item>vingt-neuf<tag>out.action.temps='29';</tag></item>
+			<item>trente<tag>out.action.temps='30';</tag></item>
+			<item>trente-et-un<tag>out.action.temps='31';</tag></item>
+			<item>trente-deux<tag>out.action.temps='32';</tag></item>
+			<item>trente-trois<tag>out.action.temps='33';</tag></item>
+			<item>trente-quatre<tag>out.action.temps='34';</tag></item>
+			<item>trente-cinq<tag>out.action.temps='35';</tag></item>
+			<item>trente-six<tag>out.action.temps='36';</tag></item>
+			<item>trente-sept<tag>out.action.temps='37';</tag></item>
+			<item>trente-huit<tag>out.action.temps='38';</tag></item>
+			<item>trente-neuf<tag>out.action.temps='39';</tag></item>
+			<item>quarante<tag>out.action.temps='40';</tag></item>
+			<item>quarante-et-un<tag>out.action.temps='41';</tag></item>
+			<item>quarante-deux<tag>out.action.temps='42';</tag></item>
+			<item>quarante-trois<tag>out.action.temps='43';</tag></item>
+			<item>quarante-quatre<tag>out.action.temps='44';</tag></item>
+			<item>quarante-cinq<tag>out.action.temps='45';</tag></item>
+			<item>quarante-six<tag>out.action.temps='46';</tag></item>
+			<item>quarante-sept<tag>out.action.temps='47';</tag></item>
+			<item>quarante-huit<tag>out.action.temps='48';</tag></item>
+			<item>quarante-neuf<tag>out.action.temps='49';</tag></item>
+			<item>cinquante<tag>out.action.temps='50';</tag></item>
+			<item>cinquante-et-un<tag>out.action.temps='51';</tag></item>
+			<item>cinquante-deux<tag>out.action.temps='52';</tag></item>
+			<item>cinquante-trois<tag>out.action.temps='53';</tag></item>
+			<item>cinquante-quatre<tag>out.action.temps='54';</tag></item>
+			<item>cinquante-cinq<tag>out.action.temps='55';</tag></item>
+			<item>cinquante-six<tag>out.action.temps='56';</tag></item>
+			<item>cinquante-sept<tag>out.action.temps='57';</tag></item>
+			<item>cinquante-huit<tag>out.action.temps='58';</tag></item>
+			<item>cinquante-neuf<tag>out.action.temps='59';</tag></item>
+			<item>soixante<tag>out.action.temps='60';</tag></item>
+			<item>soixante-et-un<tag>out.action.temps='61';</tag></item>
+			<item>soixante-deux<tag>out.action.temps='62';</tag></item>
+			<item>soixante-trois<tag>out.action.temps='63';</tag></item>
+			<item>soixante-quatre<tag>out.action.temps='64';</tag></item>
+			<item>soixante-cinq<tag>out.action.temps='65';</tag></item>
+			<item>soixante-six<tag>out.action.temps='66';</tag></item>
+			<item>soixante-sept<tag>out.action.temps='67';</tag></item>
+			<item>soixante-huit<tag>out.action.temps='68';</tag></item>
+			<item>soixante-neuf<tag>out.action.temps='69';</tag></item>
+			<item>soixante-dix<tag>out.action.temps='70';</tag></item>
+			<item>soixante-et-onze<tag>out.action.temps='71';</tag></item>
+			<item>soixante-douze<tag>out.action.temps='72';</tag></item>
+			<item>soixante-treize<tag>out.action.temps='73';</tag></item>
+			<item>soixante-quatorze<tag>out.action.temps='74';</tag></item>
+			<item>soixante-quinze<tag>out.action.temps='75';</tag></item>
+			<item>soixante-seize<tag>out.action.temps='76';</tag></item>
+			<item>soixante-dix-sept<tag>out.action.temps='77';</tag></item>
+			<item>soixante-dix-huit<tag>out.action.temps='78';</tag></item>
+			<item>soixante-dix-neuf<tag>out.action.temps='79';</tag></item>
+			<item>quatre-vingts<tag>out.action.temps='80';</tag></item>
+			<item>quatre-vingt-un<tag>out.action.temps='81';</tag></item>
+			<item>quatre-vingt-deux<tag>out.action.temps='82';</tag></item>
+			<item>quatre-vingt-trois<tag>out.action.temps='83';</tag></item>
+			<item>quatre-vingt-quatre<tag>out.action.temps='84';</tag></item>
+			<item>quatre-vingt-cinq<tag>out.action.temps='85';</tag></item>
+			<item>quatre-vingt-six<tag>out.action.temps='86';</tag></item>
+			<item>quatre-vingt-sept<tag>out.action.temps='87';</tag></item>
+			<item>quatre-vingt-huit<tag>out.action.temps='88';</tag></item>
+			<item>quatre-vingt-neuf<tag>out.action.temps='89';</tag></item>
+			<item>quatre-vingt-dix<tag>out.action.temps='90';</tag></item>
+			<item>quatre-vingt-onze<tag>out.action.temps='91';</tag></item>
+			<item>quatre-vingt-douze<tag>out.action.temps='92';</tag></item>
+			<item>quatre-vingt-treize<tag>out.action.temps='93';</tag></item>
+			<item>quatre-vingt-quatorze<tag>out.action.temps='94';</tag></item>
+			<item>quatre-vingt-quinze<tag>out.action.temps='95';</tag></item>
+			<item>quatre-vingt-seize<tag>out.action.temps='96';</tag></item>
+			<item>quatre-vingt-dix-sept<tag>out.action.temps='97';</tag></item>
+			<item>quatre-vingt-dix-huit<tag>out.action.temps='98';</tag></item>
+			<item>quatre-vingt-dix-neuf<tag>out.action.temps='99';</tag></item>
+			<item>cent<tag>out.action.temps='100';</tag></item>
+		</one-of>
+		<one-of>
+			<item>seconde<tag>out.action.type='sec';</tag></item>
+			<item>secondes<tag>out.action.type='sec';</tag></item>
+			<item>minute<tag>out.action.type='min';</tag></item>
+			<item>minutes<tag>out.action.type='min';</tag></item>
+			<item>heure<tag>out.action.type='hour';</tag></item>
+			<item>heures<tag>out.action.type='hour';</tag></item>
+			<item>jour<tag>out.action.type='day';</tag></item>
+			<item>jours<tag>out.action.type='day';</tag></item>
+		</one-of>
+
+		<tag>out.action._attributes.tts = "Ok"</tag> 
+		<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/minuteur";</tag>
+	</rule>
+</grammar>

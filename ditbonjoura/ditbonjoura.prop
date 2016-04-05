@@ -1,0 +1,8 @@
+{
+  "modules" : { 
+    "ditbonjoura"  : {
+      "description": "Jarvis dit bonjour à quelqu'un",
+      "version"    : "1.5"
+    }
+  }
+}

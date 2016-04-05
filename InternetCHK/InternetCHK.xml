@@ -1,0 +1,24 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleInternetCHK" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleInternetCHK" scope="public">
+	<example>Jarvis peux tu me donner le status de la connexion ?</example>
+    <tag>out.action=new Object(); </tag>
+
+    <item>Jarvis</item>
+
+    <one-of>
+  	  <item>vérifie la connexion<tag>out.action._attributes.tts="Je vérifie"</tag></item>
+  	  <item>peux tu me donner le status de la connexion<tag>out.action._attributes.tts="Je vérifie"</tag></item>
+      <item>tu peux me donner le status de la connexion<tag>out.action._attributes.tts="Je vérifie"</tag></item>
+      <item>je suis connecté à internet<tag>out.action._attributes.tts="Je vérifie"</tag></item>
+      <item>je suis connecté à internet ou pas<tag>out.action._attributes.tts="Je vérifie"</tag></item>
+      <item>jsuis connecté à internet ou pas<tag>out.action._attributes.tts="Je vérifie"</tag></item>
+      <item>est-ce que internet fonctionne<tag>out.action._attributes.tts="Je vérifie"</tag></item>
+      <item>est-ce qu'il y a de la connexion internet<tag>out.action._attributes.tts="Je vérifie"</tag></item>
+      <item>il y a de la connexion<tag>out.action._attributes.tts="Je vérifie"</tag></item>
+      <item>y'a de la connexion<tag>out.action._attributes.tts="Je vérifie"</tag></item>
+      <item>y'a de la connexion ou pas<tag>out.action._attributes.tts="Je vérifie"</tag></item>
+    </one-of>
+     
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/InternetCHK";</tag>
+  </rule>
+</grammar>

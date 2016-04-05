@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<title>Jarvis Speech API</title>
+		<link href="css/main.css" rel="stylesheet">
+    	<link href="css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="speech-container">
+			<div class="speech">
+				<div class="confidence">0</div>
+				<div class="transcript">...</div>
+			</div>
+		</div>
+		<div class="plugin-container">
+			<div class="plugin">
+				Plugin actif: <span class="plugin_name">Aucun</span>
+			</div>
+			<div class="sarah">
+				<div class="name">Sarah: <div class="smiley">:-&#x00b7;</div></div>
+				<div class="say">
+					<span>D'accord, je m'en</span><span class="saying"> occuppe </span><span>tout de suite. Dois-je encore en faire plus ?</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="log-container"></div>
+	    <div id="speak-container"></div>
+	    <div id="hour-container">
+	      <i class="fa fa-clock-o"></i>
+	      <span class="heure">00 : 00 : 00</span>
+	    </div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="speech.js"></script>
+	</body>
+</html>

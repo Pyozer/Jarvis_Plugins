@@ -1,0 +1,515 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleCalcul"  tag-format="semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar" xmlns:sapi="http://schemas.microsoft.com/Speech/2002/06/SRGSExtensions">
+  <!-- ========================================== -->
+
+  <rule id="ruleCalcul" scope="public">
+    <example>Jarvis combien ça fait 2 + 3 ?</example>
+    <tag>out.action=new Object();</tag>
+    <item>Jarvis</item>
+    <one-of>
+      <item>combien ça fait </item>
+      <item>peux tu calculer </item>
+      <item>calcule</item>
+    </one-of>
+	<item>
+    <ruleref uri="#Nombre" />
+    <tag>out.action.somme='('+rules.latest();</tag>
+	</item>
+	<item repeat="0-1">au carré <tag>out.action.somme='%'+out.action.somme+'%';</tag></item>
+	<item repeat="0-2">
+		<ruleref uri="#Operation" />
+		<tag>out.action.somme2+=rules.latest().res.operation+rules.latest().res.somme2+')';</tag>
+	</item>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/calcul";</tag>
+  </rule>  
+  <rule id="Operation" scope="private">
+  	<tag>out.res=new Object(); </tag>
+  	<one-of>
+  		<item>plus<tag>out.res.operation=" plus ";</tag></item>
+  		<item>+<tag>out.res.operation=" plus ";</tag></item>
+  		<item>plusse<tag>out.res.operation=" plus ";</tag></item>
+  		<item>fois<tag>out.res.operation=" * ";</tag></item>
+  		<item>moins<tag>out.res.operation=" - ";</tag></item>
+  		<item>divisé par<tag>out.res.operation=" / ";</tag></item>
+      <item>diviser par<tag>out.res.operation=" / ";</tag></item>
+  	</one-of>
+  	<item>
+  	  <ruleref uri="#Nombre" />
+  	  <tag>out.res.somme2=rules.latest();</tag>
+  	</item>
+  	<item repeat="0-1">au carré<tag>out.res.somme2='% '+out.res.somme2+'%';</tag>
+  	</item>
+  </rule>
+  <rule id="Nombre" scope="public">
+    <example>zéro</example>
+    <item>
+      <ruleref uri="#Nombre_0_to_1000"/>
+    </item>
+  </rule>
+  <rule id="Nombre_0" scope="public">
+    <example>zéro</example>
+    <item>zéro</item>
+    <tag>out = 0;</tag>
+  </rule>
+  <rule id="Nombre_1" scope="public">
+    <example>un</example>
+    <item>un</item>
+    <tag>out = 1;</tag>
+  </rule>
+  <rule id="Nombre_2_to_9" scope="public">
+    <example>trois</example>
+    <one-of>
+      <item>
+        deux <tag> out = 2; </tag>
+      </item>
+      <item>
+        trois <tag> out = 3; </tag>
+      </item>
+      <item>
+        quatre <tag> out = 4; </tag>
+      </item>
+      <item>
+        cinq <tag> out = 5; </tag>
+      </item>
+      <item>
+        six <tag> out = 6; </tag>
+      </item>
+      <item>
+        sept <tag> out = 7; </tag>
+      </item>
+      <item>
+        huit <tag> out = 8; </tag>
+      </item>
+      <item>
+        neuf <tag> out = 9; </tag>
+      </item>
+    </one-of>
+  </rule>
+ 
+  <rule id="Nombre_10_to_20" scope="public">
+    <example> dix-sept </example>
+    <one-of>
+        <item>
+        dix <tag> out = 10; </tag>
+      </item>
+      <item>
+        onze <tag> out = 11; </tag>
+      </item>     
+      <item>
+        douze <tag> out = 12; </tag>
+      </item>
+      <item>
+        treize <tag> out = 13; </tag>
+      </item>
+      <item>
+        quatorze <tag> out = 14; </tag>
+      </item>
+      <item>
+        quinze <tag> out = 15; </tag>
+      </item>
+      <item>
+        seize <tag> out = 16; </tag>
+      </item>
+      <item>
+        dix-sept <tag> out = 17; </tag>
+      </item>
+      <item>
+        dix-huit <tag> out = 18; </tag>
+      </item>
+      <item>
+        dix-neuf <tag> out = 19; </tag>
+      </item>
+      <item>
+        vingt <tag> out = 20; </tag>
+      </item>
+    </one-of>
+  </rule>
+ 
+   <rule id="Nombre_21_to_30" scope="public">
+    <example> vingt-cinq </example>
+    <one-of>
+      <item>
+        vingt et un <tag> out = 21; </tag>
+      </item>     
+      <item>
+        vingt-deux <tag> out = 22; </tag>
+      </item>
+      <item>
+        vingt-trois <tag> out = 23; </tag>
+      </item>
+      <item>
+        vingt-quatre <tag> out = 24; </tag>
+      </item>
+      <item>
+        vingt-cinq <tag> out = 25; </tag>
+      </item>
+      <item>
+        vingt-six <tag> out = 26; </tag>
+      </item>
+      <item>
+        vingt-sept <tag> out = 27; </tag>
+      </item>
+      <item>
+        vingt-huit <tag> out = 28; </tag>
+      </item>
+      <item>
+        vingt-neuf <tag> out = 29; </tag>
+      </item>
+      <item>
+        trente <tag> out = 30; </tag>
+      </item>
+    </one-of>
+  </rule>
+ 
+  <rule id="Nombre_31_to_40" scope="public">
+    <example> trent-deux </example>
+    <one-of>
+      <item>
+        trente et un <tag> out = 31; </tag>
+      </item>     
+      <item>
+        trente-deux <tag> out = 32; </tag>
+      </item>
+      <item>
+        trente-trois <tag> out = 33; </tag>
+      </item>
+      <item>
+        trente-quatre <tag> out = 34; </tag>
+      </item>
+      <item>
+        trente-cinq <tag> out = 35; </tag>
+      </item>
+      <item>
+        trente-six <tag> out = 36; </tag>
+      </item>
+      <item>
+        trente-sept <tag> out = 37; </tag>
+      </item>
+      <item>
+        trente-huit <tag> out = 38; </tag>
+      </item>
+      <item>
+        trente-neuf <tag> out = 39; </tag>
+      </item>
+      <item>
+        quarante <tag> out = 40; </tag>
+      </item>
+    </one-of>
+  </rule>
+ 
+  <rule id="Nombre_41_to_50" scope="public">
+    <example> quarante-quatre </example>
+    <one-of>
+      <item>
+        quarante et un <tag>out = 41; </tag>
+      </item>
+      <item>
+        quarante-deux <tag>out = 42; </tag>
+      </item>
+      <item>
+        quarante-trois <tag>out = 43; </tag>
+      </item>
+      <item>
+        quarante-quatre <tag>out = 44; </tag>
+      </item>
+      <item>
+        quarante-cinq <tag>out = 45; </tag>
+      </item>
+      <item>
+        quarante-six <tag>out = 46; </tag>
+      </item>
+      <item>
+        quarante-sept <tag>out = 47; </tag>
+      </item>
+      <item>
+        quarante-huit <tag>out = 48; </tag>
+      </item>
+      <item>
+        quarante-neuf <tag>out = 49; </tag>
+      </item>
+      <item>
+        cinquante <tag>out = 50; </tag>
+      </item>
+    </one-of>
+  </rule>
+   
+  <rule id="Nombre_51_to_60" scope="public">
+    <example> cinquante-deux </example>
+    <one-of>
+      <item>
+        cinquante et un <tag>out = 51; </tag>
+      </item>
+      <item>
+        cinquante-deux <tag>out = 52; </tag>
+      </item>
+      <item>
+        cinquante-trois <tag>out = 53; </tag>
+      </item>
+      <item>
+        cinquante-quatre <tag>out = 54; </tag>
+      </item>
+      <item>
+        cinquante-cinq <tag>out = 55; </tag>
+      </item>
+      <item>
+        cinquante-six <tag>out = 56; </tag>
+      </item>
+      <item>
+        cinquante-sept <tag>out = 57; </tag>
+      </item>
+      <item>
+        cinquante-huit <tag>out = 58; </tag>
+      </item>
+      <item>
+        cinquante-neuf <tag>out = 59; </tag>
+      </item>
+      <item>
+        soixante <tag>out = 60; </tag>
+      </item>
+    </one-of>
+  </rule>
+ 
+  <rule id="Nombre_61_to_70" scope="public">
+    <example> soixante et un </example>
+    <example> soixante-cinq </example>
+    <one-of>
+      <item>
+        soixante et un <tag>out = 61; </tag>
+      </item>
+      <item>
+        soixante-deux <tag>out = 62; </tag>
+      </item>
+      <item>
+        soixante-trois <tag>out = 63; </tag>
+      </item>
+      <item>
+        soixante-quatre <tag>out = 64; </tag>
+      </item>
+      <item>
+        soixante-cinq <tag>out = 65; </tag>
+      </item>
+      <item>
+        soixante-six <tag>out = 66; </tag>
+      </item>
+      <item>
+        soixante-sept <tag>out = 67; </tag>
+      </item>
+      <item>
+        soixante-huit <tag>out = 68; </tag>
+      </item>
+      <item>
+        soixante-neuf <tag>out = 69; </tag>
+      </item>
+       <item>
+        soixante-dix <tag>out = 70; </tag>
+      </item>
+    </one-of>
+  </rule>
+ 
+  <rule id="Nombre_71_to_80" scope="public">
+    <example> soixante et onze </example>
+    <example> soixante-treize </example>
+    <one-of>
+      <item>
+        soixante et onze <tag>out = 71; </tag>
+      </item>
+      <item>
+        soixante-douze <tag>out = 72; </tag>
+      </item>
+      <item>
+        soixante-treize <tag>out = 73; </tag>
+      </item>
+      <item>
+        soixante-quatorze <tag>out = 74; </tag>
+      </item>
+      <item>
+        soixante-quinze <tag>out = 75; </tag>
+      </item>
+      <item>
+        soixante-seize <tag>out = 76; </tag>
+      </item>
+      <item>
+        soixante-dix-sept <tag>out = 77; </tag>
+      </item>
+      <item>
+        soixante-dix-huit <tag>out = 78; </tag>
+      </item>
+      <item>
+        soixante-dix-neuf <tag>out = 79; </tag>
+      </item>
+      <item>
+        quatre-vingt <tag>out = 80; </tag>
+      </item>
+    </one-of>
+  </rule>
+   
+  <rule id="Nombre_81_to_90" scope="public">
+    <example> quatre-vingt-deux  </example>
+    <example> quatre-vingt-quatre  </example>
+    <one-of>
+      <item>
+        quatre-vingt-un <tag>out = 81; </tag>
+      </item>
+      <item>
+        quatre-vingt-deux <tag>out = 82; </tag>
+      </item>
+      <item>
+        quatre-vingt-trois <tag>out = 83; </tag>
+      </item>
+      <item>
+        quatre-vingt-quatre <tag>out = 84; </tag>
+      </item>
+      <item>
+        quatre-vingt-cinq <tag>out = 85; </tag>
+      </item>
+      <item>
+        quatre-vingt-six <tag>out = 86; </tag>
+      </item>
+      <item>
+        quatre-vingt-sept <tag>out = 87; </tag>
+      </item>
+      <item>
+        quatre-vingt-huit <tag>out = 88; </tag>
+      </item>
+      <item>
+        quatre-vingt-neuf <tag>out = 89; </tag>
+      </item>
+      <item>
+        quatre-vingt-dix <tag>out = 90; </tag>
+      </item>
+    </one-of>
+  </rule>
+   
+  <rule id="Nombre_91_to_99" scope="public">
+    <example> quatre-vingt-treize  </example>
+    <example> quatre-vingt-quatorze  </example>
+    <one-of>
+      <item>
+        quatre-vingt-onze <tag>out = 91; </tag>
+      </item>
+      <item>
+        quatre-vingt-douze <tag>out = 92; </tag>
+      </item>
+      <item>
+        quatre-vingt-treize <tag>out = 93; </tag>
+      </item>
+      <item>
+        quatre-vingt-quatorze <tag>out = 94; </tag>
+      </item>
+      <item>
+        quatre-vingt-quinze <tag>out = 95; </tag>
+      </item>
+      <item>
+        quatre-vingt-seize <tag>out = 96; </tag>
+      </item>
+      <item>
+        quatre-vingt-dix-sept <tag>out = 97; </tag>
+      </item>
+      <item>
+        quatre-vingt-dix-huit <tag>out = 98; </tag>
+      </item>
+      <item>
+        quatre-vingt-dix-neuf <tag>out = 99; </tag>
+      </item>
+    </one-of>
+  </rule>
+ 
+   <rule id="Nombre_100" scope="public">
+    <example> cent </example>
+    <item> cent </item>
+    <tag> out = 100; </tag>
+  </rule>
+ 
+  <rule id="Nombre_1_to_99" scope="public">
+    <example> trois </example>
+    <example> dix-sept </example>
+    <one-of>
+      <item>
+        <ruleref uri="#Nombre_1" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_2_to_9" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_10_to_20" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_21_to_30" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_31_to_40" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_41_to_50" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_51_to_60" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_61_to_70" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_71_to_80" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_81_to_90" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_91_to_99" />
+      </item>
+    </one-of>
+  </rule>
+ 
+ 
+  <rule id="Nombre_100_to_999" scope="public">
+    <example> trois cent soixante  </example>
+    <example> quatre cent cinquante-six  </example>
+    <tag>out = 100 </tag>
+    <one-of>
+      <item>
+        cent
+      </item>
+      <item>
+        cent
+        <ruleref uri="#Nombre_1_to_99" />
+        <tag>out += rules.Nombre_1_to_99 </tag>
+      </item>
+      <item>
+        <ruleref uri="#Nombre_2_to_9" />
+        cents
+        <tag>out = out * rules.Nombre_2_to_9 </tag>
+      </item>
+      <item>
+        <ruleref uri="#Nombre_2_to_9" />
+        cent
+        <tag>out = out * rules.Nombre_2_to_9 </tag>
+        <ruleref uri="#Nombre_1_to_99" />
+        <tag>out += rules.Nombre_1_to_99 </tag>
+      </item>
+    </one-of>
+  </rule>
+ 
+  <rule id="Nombre_1000" scope="public">
+    <example> mille </example>
+    <item> mille </item>
+    <tag> out = 1000; </tag>
+  </rule>
+ 
+  <rule id="Nombre_0_to_1000" scope="public">
+    <example> trois </example>
+    <example> neuf cent vingt-quatre </example>
+    <one-of>
+        <item>
+        <ruleref uri="#Nombre_0" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_1_to_99" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_100_to_999" />
+      </item>
+      <item>
+        <ruleref uri="#Nombre_1000" />
+      </item>
+    </one-of>
+  </rule>
+</grammar>

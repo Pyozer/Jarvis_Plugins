@@ -1,0 +1,10 @@
+{
+  "modules" : { 
+    "minuteur"  : {
+      "description": "Permet de mettre une minuterie",
+      "song": "trompette1.mp3",
+      "auteur": "Jean-Charles Moussé",
+      "version"    : "0.5"
+    }
+  }
+}

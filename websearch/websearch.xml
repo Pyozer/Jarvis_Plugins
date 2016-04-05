@@ -1,0 +1,30 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="rulewebsearch" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulewebsearch" scope="public">
+    <example>Jarvis recherche sur internet les actualitées le monde</example>
+    <tag>out.action=new Object(); </tag>
+
+    <item>Jarvis</item>
+    <one-of>
+    	<item>recherche</item>
+	    <item>recherche sur</item>
+	    <item>tu peux rechercher sur</item>
+	    <item>cherche sur</item>
+	    <item>tu peux chercher sur</item>
+	</one-of>
+    <one-of>
+	    <item>google<tag>out.action.val="google";</tag></item>
+	    <item>internet<tag>out.action.val="google";</tag></item>
+	    <item>t411<tag>out.action.val="411";</tag></item>
+	    <item>ebay<tag>out.action.val="ebay";</tag></item>
+	    <item>youtube<tag>out.action.val="youtube";</tag></item>
+	    <item>leboncoin<tag>out.action.val="lbc";</tag></item>
+	    <item>la communauté<tag>out.action.val="com";</tag></item>
+	    <item>la communautée<tag>out.action.val="com";</tag></item>
+	    <item>des images de<tag>out.action.val="images";</tag></item>
+    </one-of>
+
+    <ruleref special="GARBAGE" />
+
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/websearch";</tag>
+  </rule>
+</grammar>

@@ -1,0 +1,57 @@
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery("#plugin-menu a").click(function () {
+            jQuery("#plugin-menu .content > ul").hide();
+            jQuery("#plugin-menu .plugin-nav ul li").removeClass("active");
+            jQuery(this).parent().addClass("active");
+            jQuery("#" + jQuery(this).data("toggle")).show();
+            return false;
+        });
+    });
+</script>
+
+<p class="page-header">
+    <span class="lead">Programme TV 2</span><br/>
+    <br/><b>Contributeurs :</b><br/>
+    - V1.3 : Vincent Legavre<br/>
+    - V1.2 : Vincent Legavre<br/>
+    - V1.1 : Vincent Legavre<br/>
+    - V1.0 : Vincent Legavre<br/>
+</p>
+
+<div id="plugin-menu" class="row-fluid">
+    <!-- Navigation -->
+    <div class="span3 well plugin-nav">
+        <ul class="nav nav-list">
+            <li class="nav-header">Documentation</li>
+            <li class="active"><a href="" data-toggle="plugin-doc">Programme TV</a></li>
+            <li class="nav-header">Commandes vocales</li>
+            <li><a href="" data-toggle="plugin-examples">Exemples</a></li>
+        </ul>
+    </div>
+    <!-- Content -->
+    <div class="span9 content">
+
+        <ul class="unstyled" id="plugin-doc">
+            1°) <u>Editez le fichier <em>"progtv2.prop"</em></u>
+            <li><i class="icon-play-circle"></i> Avec les numéros de vos chaines préférées. Exemple : <em>"chaines_favoris" : "1, 6, 9, 10, 82"</em> pour TF1, M6, W9 et TMC</li>
+            <li><i class="icon-play-circle"></i> Avec les noms de vos bouquets préférées qui correspondent à vos chaines préférées. Exemple : <em>"bouquets_favoris" : "tnt, sport"</em> pour TF1, M6, W9 et TMC qui appartiennent au bouquet "tnt" et Eurosport qui appartient au bouquet "sport".</li>
+            <br/>Vous trouverez la liste des chaines avec leurs numéros triées par bouquet dans le fichier "progtv2.js" ligne 160.<br/>
+            <br/>Si vous demandez le programme télé sans spécifier de chaine, alors Sarah renverra les informations du programme télé de vos chaines favorites indiquées dans <em>"chaines_favoris"</em> du fichier <em>progtv2.prop</em>.
+            <br/>Jetez un oeil aux exemples.
+            <br/>
+        </ul>
+
+        <ul class="unstyled" id="plugin-examples" style="display: none;">
+            <u>Exemples :</u><br/>
+            <li><i class="icon-play-circle"></i> <em>"qu'est ce qu'il y a à la télé ?"</em> renvoi le programme télé actuel des chaines configurées dans le fichier progtv2.prop</li>
+            <li><i class="icon-play-circle"></i> <em>"qu'est ce qu'il y a à la télé en ce moment ?"</em> renvoi le programme télé actuel des chaines configurées dans le fichier progtv2.prop</li>
+            <li><i class="icon-play-circle"></i> <em>"qu'est ce qu'il y a à la télé ce soir ?"</em> renvoi le programme télé de ce soir pour les chaines configurées dans le fichier progtv2.prop</li>
+            <li><i class="icon-play-circle"></i> <em>"qu'est ce qu'il y a à la télé lundi ?"</em> renvoi le programme télé de lundi soir pour les chaines configurées dans le fichier progtv2.prop</li>
+            <li><i class="icon-play-circle"></i> <em>"qu'est ce qu'il y a à la télé vendredi sur la 10 ?"</em> renvoi le programme télé de TMC de vendredi soir</li>
+            <li><i class="icon-play-circle"></i> <em>"qu'est ce qu'il y a à la télé vendredi sur TMC ?"</em> renvoi le programme télé de TMC de vendredi soir</li>
+            <br/>
+            <br/>Pour les programmes en cours, Sarah renvoi le temps écoulé depuis le début du programme et l'heure à laquelle se termine le programme.
+        </ul>
+    </div>
+</div>

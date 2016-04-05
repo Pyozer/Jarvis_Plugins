@@ -1,0 +1,11 @@
+{
+    "modules"    : { 
+    "insultes"   : {
+    "description": "Fait réagir Sarah aux classiques insultes qu'elle reçoit",
+    "version"    : "2.0",
+    "Auteur"     : "Frédéric MUNIER",
+    "Categorie"  : "Speech",
+    "h"          :2
+    }
+  }
+}

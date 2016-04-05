@@ -1,0 +1,20 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="rulewikipedia" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+	<rule id="rulewikipedia" scope="public">
+		<example>Jarvis définit le mot france</example>
+		<tag>out.action=new Object(); </tag>
+
+		<item>Jarvis</item>
+		
+		<one-of>
+			<item>cherche le mot</item>
+			<item>recherche le mot</item>
+			<item>définit le mot</item>
+			<item>definit le mot</item>
+			<item>définir le mot</item>
+			<item>tu peux définir le mot</item>
+		</one-of>
+		<ruleref special="GARBAGE" />
+		
+		<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/wikipedia";</tag>
+	</rule>
+</grammar>

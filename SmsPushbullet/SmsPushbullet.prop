@@ -1,0 +1,15 @@
+{
+  "modules": { 
+    "SmsPushbullet": {
+      "description": "Permet d'envoyer un SMS via Pushbullet",
+      "access_token": "o.xmnFKZe8gGmfXAKJN0kQmvVXSZzOwYMm",
+      "source_user_iden": "ujDMkaS38JosjAnBdJA0yG",
+      "target_device_iden": "ujDMkaS38Josjz2gRnO9Aq",
+      "contact": {
+        "aymeric": "0695446875",
+        "jb": "0652555405",
+        "valentin": "0652555405"
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "modules" : { 
+    "horoscope"  : {
+      "description": "Ayez votre horoscope du jour, ou celui d'un autre signe astrologique.",
+      "signe": "taureau",
+      "version"    : "1.0"
+    }
+  }
+}

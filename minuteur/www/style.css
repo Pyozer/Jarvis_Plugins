@@ -1,0 +1,8 @@
+#minuteur .portlet-header,
+#minuteur .portlet-footer {
+  background-color: #999999;
+}
+#minuteur .portlet-body {
+  color: #FFF;
+  background: #999999;
+}

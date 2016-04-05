@@ -1,0 +1,11 @@
+{
+    "modules"      : { 
+    "bruitages"    : {
+    "description"  : "Reproduit 70 cris d'animaux environs",
+    "version"      : "2.0",
+    "Auteur"       : "Frédéric MUNIER",
+    "Categorie"    : "Speech",
+    "h"            :2
+    }
+  }
+}

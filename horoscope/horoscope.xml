@@ -1,0 +1,50 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice"  root="rulehoroscope" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulehoroscope">
+    <tag>out.action=new Object(); </tag>
+
+    <item weight="2">Jarvis</item>
+
+    <one-of>
+		<item>dit moi mon horoscope</item>
+		<item>quel est mon horoscope</item>
+		<item>tu peux me dire mon horoscope</item>
+		<item>tu peux me dire quel est mon horoscope</item>
+		<item>tu peux dire quel est mon horoscope</item>
+		<item>tu peux dire c'est quoi mon horoscope</item>
+
+		<item>dit moi l'horoscope</item>
+		<item>quel est l'horoscope</item>
+		<item>tu peux me dire l'horoscope</item>
+		<item>c'est quoi l'horoscope</item>
+    </one-of>
+    <item repeat="0-1">
+    	<one-of>
+    		<item>de</item>
+    		<item>du</item>
+    	</one-of>
+    </item>
+    <item repeat="0-1">
+    	<one-of>
+    		<item>bélier<tag>out.action.horoscope="belier";</tag></item>
+    		<item>taureau<tag>out.action.horoscope="taureau";</tag></item>
+    		<item>gémeaux<tag>out.action.horoscope="gemeaux";</tag></item>
+    		<item>cancer<tag>out.action.horoscope="cancer";</tag></item>
+    		<item>lion<tag>out.action.horoscope="lion";</tag></item>
+    		<item>vierge<tag>out.action.horoscope="vierge";</tag></item>
+    		<item>balance<tag>out.action.horoscope="balance";</tag></item>
+    		<item>scorpion<tag>out.action.horoscope="scorpion";</tag></item>
+    		<item>sagittaire<tag>out.action.horoscope="sagittaire";</tag></item>
+    		<item>capricorne<tag>out.action.horoscope="capricorne";</tag></item>
+    		<item>verseau<tag>out.action.horoscope="verseau";</tag></item>
+    		<item>poissons<tag>out.action.horoscope="poissons";</tag></item>
+    	</one-of>
+    </item>
+    <item repeat="0-1">
+    	<one-of>
+    		<item>aujourd'hui</item>
+    		<item>d'aujourd'hui</item>
+    	</one-of>
+    </item>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/horoscope";</tag>
+  </rule>
+</grammar>

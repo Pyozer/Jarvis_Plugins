@@ -1,0 +1,9 @@
+{
+  "modules" : { 
+    "bonjour"  : {
+      "description": "Jarvis répond aux salutations",
+      "auteur": "Jean-Charles Moussé",
+      "version"    : "1.0"
+    }
+  }
+}

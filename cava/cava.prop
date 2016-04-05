@@ -1,0 +1,9 @@
+{
+  "modules" : { 
+    "cava"  : {
+      "description": "Jarvis répondre aux demande sur son état (Comment vas-tu ?...)",
+      "auteur": "Jean-Charles Moussé",
+      "version"    : "1.0"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice"  root="ruleVdm" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleVdm">
+    <tag>out.action=new Object(); </tag>
+
+    <item weight="2">Jarvis</item>
+    <one-of>
+      <item>li moi une vie dmerde<tag>out.action.command = "random";</tag></item>
+      <item>lit moi une vie de merde<tag>out.action.command = "random";</tag></item>
+      <item>dit moi une vie de merde<tag>out.action.command = "random";</tag></item>
+      <item>dit moi une vie dmerde<tag>out.action.command = "random";</tag></item>
+      <item>raconte moi une vie dmerde<tag>out.action.command = "random";</tag></item>
+      <item>raconte moi une vie de merde<tag>out.action.command = "random";</tag></item>
+      <item>une autre vie de merde<tag>out.action.command = "random";</tag></item>
+    </one-of>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/vdm";</tag>
+  </rule>
+</grammar>

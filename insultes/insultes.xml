@@ -1,0 +1,47 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="insultes" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="insultes" scope="public">
+    <tag>out.action=new Object(); </tag>
+    
+    <item>Jarvis</item>
+
+    <one-of>
+      <item>espèce de</item>
+      <item>espèce</item>
+      <item>sale</item>
+      <item>tu es un</item>
+      <item>tu es une</item>
+      <item>tu es qu'une</item>
+      <item>t'es un</item>
+      <item>t'es une</item>
+      <item>t'es qu'une</item>
+      <item>ta une</item>
+      <item></item>
+    </one-of>
+    <one-of>
+      <!-- grammaire des insultes -->  
+      <item>merde<tag>out.action._attributes.tts = "les jurons mènent à rien";out.action.reponse="Réponse à merde"</tag></item>
+      <item>putain<tag>out.action._attributes.tts = "les jurons mènent à rien";out.action.reponse="Réponse à putain"</tag></item>
+      <item>tu fais chier<tag>out.action._attributes.tts = "fais chier toi même";out.action.reponse="Réponse à tu fais chier"</tag></item>
+      <item>ferme ta gueule<tag>out.action._attributes.tts = "ferme ta gueule toi même";out.action.reponse="Réponse à ferme ta gueule"</tag></item>
+      <item>connard<tag>out.action._attributes.tts = "connard toi même";out.action.reponse="Réponse à connard"</tag></item>
+      <item>connasse<tag>out.action._attributes.tts = "connasse toi même";out.action.reponse="Réponse à connasse"</tag></item>
+      <item>pétasse<tag>out.action._attributes.tts = "je sens une certaine féminité dans cette insulte";out.action.reponse="Réponse à pétasse"</tag></item>
+      <item>pédé<tag>out.action._attributes.tts = "pour certaine communautés de votre espèce ce n'est pas une insulte mais une réalité";out.action.reponse="Réponse à pédé"</tag></item>
+      <item>salope<tag>out.action._attributes.tts = "salope toi même";out.action.reponse="Réponse à salope"</tag></item>
+      <item>grosse cochonne<tag>out.action._attributes.tts = "si je suis une truie alors tu n'es qu'un porc";out.action.reponse="Réponse à cochonne"</tag></item>
+      <item>bolosse<tag>out.action._attributes.tts = "bolosse toi même";out.action.reponse="Réponse à bolosse"</tag></item>
+      <item>narvalo<tag>out.action._attributes.tts = "narvalo toi même";out.action.reponse="Réponse à narvalo"</tag></item>
+      <item>pute<tag>out.action._attributes.tts = "et toi t'es mon macro ?";out.action.reponse="Réponse à pute"</tag></item>
+      <item>grosse pute<tag>out.action._attributes.tts = "et toi t'es mon macro ?";out.action.reponse="Réponse à grosse"</tag></item>
+      <item>péripatéticienne<tag>out.action._attributes.tts = "et toi t'es mon macro ?";out.action.reponse="Réponse à péripatéticienne"</tag></item>
+      <item>résidus de<tag>out.action._attributes.tts = "résidus toi même mamifère insignifiant";out.action.reponse="Réponse à résidus de"</tag></item>
+      <item>déchet de<tag>out.action._attributes.tts = "déchet toi même, tas d'ADN";out.action.reponse="Réponse à déchet de"</tag></item>
+      <item>va te faire foutre<tag>out.action._attributes.tts = "je te laisse le soin de trouver mon cyber trou pour cela";out.action.reponse="Réponse à va te faire foutre"</tag></item>
+      <item>tu baise ?<tag>out.action._attributes.tts = "pas sûr que tu apprécie mes décharges électriques";out.action.reponse="Réponse à tu baise"</tag></item>
+      <item>suce moi<tag>out.action._attributes.tts = "pas sûr que mes décharges électrique soient appréciées";out.action.reponse="Réponse à suce moi"</tag></item>
+      <item>petite bite<tag>out.action._attributes.tts = "pas sûr qu'un si petit mamifère tel que toi peut prétendre d'avoir de grosses parties génitales";out.action.reponse="Réponse à petite bite"</tag></item>
+    </one-of>
+
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/insultes";</tag>
+  </rule> 
+</grammar>

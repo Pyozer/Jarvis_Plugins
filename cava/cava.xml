@@ -1,0 +1,21 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="rulecava" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulecava" scope="public">
+    <example>Jarvis comment va tu ?</example>
+    <tag>out.action=new Object(); </tag>
+
+    <item weight="2">Jarvis</item>
+    <one-of>
+        <item>ça va</item>
+        <item>sa va</item>
+        <item>comment tu vas</item>
+        <item>comment vas tu</item>
+        <item>tu va biens</item>
+        <item>comment ça va</item>
+        <item>la forme</item>
+        <item>la patate</item>
+        <item>tu vas comment</item>
+    </one-of>
+    
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/cava";</tag>
+  </rule>
+</grammar>

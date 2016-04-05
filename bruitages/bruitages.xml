@@ -1,0 +1,83 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="bruitages" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="bruitages" scope="public">
+    <tag>out.action=new Object(); </tag>
+
+    <item>Jarvis</item>
+
+    <one-of>      
+		<!-- depuis Sarah V4 le répertoire de la fonction out.action._attributes.play est chrooté dans /client/AddOns/speaker/medias pour en sortir et pouvoir retourner dans l'arborescence
+		du plugin bruitages, j'utilise la syntaxe "../../../../../../../../plugins/bruitages"-->
+		<item>fais la poule<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/poule.mp3";out.action.reponse="Imitation de la poule";</tag></item>
+		<item>fais l'ours<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/ours.mp3";out.action.reponse="Imitation de l'ours";</tag></item>
+		<item>fais le porc<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/porc.mp3";out.action.reponse="Imitation du porc";</tag></item>
+		<item>fais le cochon<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/porc.mp3";out.action.reponse="Imitation du cochon";</tag></item>
+		<item>fais le grillon<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/grillon.mp3";out.action.reponse="Imitation du grillon";</tag></item>
+		<item>fais le chien de prairie<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/chienprairie.mp3";out.action.reponse="Imitation du chien de prairie";</tag></item>
+		<item>fais le hérisson<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/herisson.mp3";out.action.reponse="Imitation de l'hérisson";</tag></item>
+		<item>fais le lapin<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/lapin.mp3";out.action.reponse="Imitation du lapin";</tag></item>
+		<item>fais le lémurien<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/lemurien.mp3";out.action.reponse="Imitation du lémurien"</tag></item>
+		<item>fais le jaguar<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/jaguar.mp3";out.action.reponse="Imitation du jaguar";</tag></item>
+		<item>fais le lama<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/lama.mp3";out.action.reponse="Imitation du lama";</tag></item>
+		<item>fais le lion<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/lion.mp3";out.action.reponse="Imitation du lion";</tag></item>
+		<item>fais le serpent<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/serpent.mp3";out.action.reponse="Imitation du serpent";</tag></item>
+		<item>fais le rat<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/rat.mp3";out.action.reponse="Imitation du rat";</tag></item>
+		<item>fais la souris<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/souris.mp3";out.action.reponse="Imitation de la souris";</tag></item>
+		<item>fais le vache<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/vache.mp3";out.action.reponse="Imitation de la vache";</tag></item>
+		<item>fais le chat<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/chat.mp3";out.action.reponse="Imitation du chat";</tag></item>
+		<item>fais le cheval<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/cheval.mp3";out.action.reponse="Imitation du cheval";</tag></item>
+		<item>fais le chien<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/chien.mp3";out.action.reponse="Imitation du chien";</tag></item>
+		<item>fais la baleine<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/baleine.mp3";out.action.reponse="Imitation de la baleine";</tag></item>
+		<item>fais le canard<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/canard.mp3";out.action.reponse="Imitation du canard";</tag></item>
+		<item>fais le bouc<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/bouc.mp3";out.action.reponse="Imitation du bouc";</tag></item>
+		<item>fais le cerf<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/cerf.mp3";out.action.reponse="Imitation du cerf";</tag></item>
+		<item>fais le chameau<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/chameau.mp3";out.action.reponse="Imitation du chameau";</tag></item>
+		<item>fais le dromadaire<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/dromadaire.mp3";out.action.reponse="Imitation du dromadaire";</tag></item>
+		<item>fais lécureuil<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/ecureuil.mp3";out.action.reponse="Imitation de l'écureuil";</tag></item>
+		<item>fais le crocodile<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/crocodile.mp3";out.action.reponse="Imitation du crocodile";</tag></item>
+		<item>fais léléphant<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/elephant.mp3";out.action.reponse="Imitation de l'éléphant";</tag></item>
+		<item>fais le gorille<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/gorille.mp3";out.action.reponse="Imitation du gorille";</tag></item>
+		<item>fais le crapaud<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/crapaud.mp3";out.action.reponse="Imitation du crapaud";</tag></item>
+		<item>fais le cochon dinde<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/cochondinde.mp3";out.action.reponse="Imitation du cochon d'Inde";</tag></item>
+		<item>fais la chèvre<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/chevre.mp3";out.action.reponse="Imitation de la chèvre";</tag></item>
+		<item>fais le couguar<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/couguar.mp3";out.action.reponse="Imitation du couguar";</tag></item>
+		<item>fais la chauve souris<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/chauvesouris.mp3";out.action.reponse="Imitation de la chauve-souris";</tag></item>
+		<item>fais le doffin<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/dauphin.mp3";out.action.reponse="Imitation du dauphin";</tag></item>
+		<item>fais le dingo<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/dingo.mp3";out.action.reponse="Imitation du dingo";</tag></item>
+		<item>fais le chamois<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/chamois.mp3";out.action.reponse="Imitation du chamois";</tag></item>
+		<item>fais le chevreau<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/chevreau.mp3";out.action.reponse="Imitation du chevreau";</tag></item>
+		<item>fais la cigale<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/cigale.mp3";out.action.reponse="Imitation de la cigale";</tag></item>
+		<item>fais la grenouille<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/grenouille.mp3";out.action.reponse="Imitation de la grenouille";</tag></item>
+		<item>fais le loup<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/loup.mp3";out.action.reponse="Imitation du loup";</tag></item>
+		<item>fais le mouton<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/mouton.mp3";out.action.reponse="Imitation du mouton";</tag></item>
+		<item>fais la marmotte<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/marmotte.mp3";out.action.reponse="Imitation de la marmotte";</tag></item>
+		<item>fais la sauterelle<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/sauterelle.mp3";out.action.reponse="Imitation de la sauterelle";</tag></item>
+		<item>fais le coyote<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/coyote.mp3";out.action.reponse="Imitation du coyote";</tag></item>
+		<item>fais le criquet<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/criquet.mp3";out.action.reponse="Imitation du criquet";</tag></item>
+		<item>fais le diable de Tasmanie<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/diabletasmanie.mp3";out.action.reponse="Imitation du diable de tasmanie";</tag></item>
+		<item>fais le guépard<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/guepard.mp3";out.action.reponse="Imitation du guépard";</tag></item>
+		<item>fais le amstère<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/hamster.mp3";out.action.reponse="Imitation du hamster";</tag></item>
+		<item>fais la iènne<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/hyene.mp3";out.action.reponse="Imitation de la hyène";</tag></item>
+		<item>fais le moustique<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/moustique.mp3";out.action.reponse="Imitation du moustique";</tag></item>
+		<item>fais labeille<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/abeille.mp3";out.action.reponse="Imitation de l'abeille'";</tag></item>
+		<item>fais le bourdon<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/bourdon.mp3";out.action.reponse="Imitation du bourdon";</tag></item>
+		<item>fais le blaireau<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/blaireau.mp3";out.action.reponse="Imitation du blaireau";</tag></item>
+		<item>fais lane<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/ane.mp3";out.action.reponse="Imitation de l'âne";</tag></item>
+		<item>fais lagneau<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/agneau.mp3";out.action.reponse="Imitation de l'agneau'";</tag></item>
+		<item>fais le singe<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/singe.mp3,out.action.reponse="Imitation du singe""</tag></item>
+		<item>fais le lynx<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/lynx.mp3";out.action.reponse="Imitation du lynx";</tag></item>
+		<item>fais la loutre<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/loutre.mp3";out.action.reponse="Imitation de la loutre";</tag></item>
+		<item>fais le lézard<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/lezard.mp3";out.action.reponse="Imitation du lézard";</tag></item>
+		<item>fais le léopard<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/leopard.mp3";out.action.reponse="Imitation du léopard";</tag></item>
+		<item>fais le poussin<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/poussin.mp3";out.action.reponse="Imitation du poussin";</tag></item>
+		<item>fais le taureau<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/taureau.mp3";out.action.reponse="Imitation du taureau";</tag></item>
+		<item>fais le veau<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/veau.mp3";out.action.reponse="Imitation du veau";</tag></item>
+		<item>fais la vipère<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/vipere.mp3";out.action.reponse="Imitation de la vipère";</tag></item>
+		<item>fais la panthère<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/panthere.mp3";out.action.reponse="Imitation de la panthère";</tag></item>
+		<item>fais le tigre<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/tigre.mp3";out.action.reponse="Imitation du tigre";</tag></item>
+		<item>fais le bison<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/bison.mp3";out.action.reponse="Imitation du bison";</tag></item>
+		<item>fais le fénnec<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/fennec.mp3";out.action.reponse="Imitation du fénnec";</tag></item>
+		<item>fais le zèbre<tag>out.action._attributes.play = "../../../../plugins/bruitages/animaux/zebre.mp3";out.action.reponse="Imitation du zèbre";</tag></item>
+    </one-of>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/bruitages";</tag>
+  </rule> 
+</grammar>

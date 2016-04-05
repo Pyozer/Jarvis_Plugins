@@ -1,0 +1,42 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="rulebonjour" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulebonjour" scope="public">
+    <example>Jarvis allume les led rouge</example>
+    <tag>out.action=new Object(); </tag>
+
+    <item weight="2">Jarvis</item>
+    <one-of>
+        <item>allume<tag>out.action.type="allumer"</tag></item>
+        <item>tu peux allumer<tag>out.action.type="allumer"</tag></item>
+        <item>peux tu allumer<tag>out.action.type="allumer"</tag></item>
+
+        <item>éteinds<tag>out.action.type="eteindre"</tag></item>
+        <item>tu peux éteindre<tag>out.action.type="eteindre"</tag></item>
+        <item>peux tu éteindre<tag>out.action.type="eteindre"</tag></item>
+
+        <item>fais clignoter les led<tag>out.action.type="blink"</tag></item>
+        <item>fais clignoter les laides<tag>out.action.type="blink"</tag></item>
+    </one-of>
+
+    <one-of>
+        <item>les led rouge<tag>out.action.led="all_red"</tag></item>
+        <item>les laide rouge<tag>out.action.led="all_red"</tag></item>
+        <item>les laides rouge<tag>out.action.led="all_red"</tag></item>
+
+        <item>les led jaune<tag>out.action.led="all_yellow"</tag></item>
+        <item>les laide jaune<tag>out.action.led="all_yellow"</tag></item>
+        <item>les laides jaune<tag>out.action.led="all_yellow"</tag></item>
+
+        <item>la première led rouge<tag>out.action.led="first_red"</tag></item>
+        <item>la première laide rouge<tag>out.action.led="first_red"</tag></item>
+
+        <item>la première led jaune<tag>out.action.led="first_yellow"</tag></item>
+        <item>la première laide jaune<tag>out.action.led="first_yellow"</tag></item>
+
+        <item>tout<tag>out.action.led="all"</tag></item>
+
+        <item></item>
+    </one-of>
+    
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/raspberry";</tag>
+  </rule>
+</grammar>

@@ -1,0 +1,23 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="rulebonjour" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulebonjour" scope="public">
+    <example>Bonjour, jarvis</example>
+    <tag>out.action=new Object(); </tag>
+
+    <one-of>
+        <item>Jarvis</item>
+        <item>hey jarvis</item>
+        <item>Aie jarvis</item>
+        <item>Bonjour></item>
+        <item>Bonsoir</item>
+        <item>Salut</item>
+    </one-of>
+    <one-of>
+        <item>bonjour</item>
+        <item>bonsoir</item>
+        <item>salut</item>
+        <item>jarvis</item>
+    </one-of>
+    
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/bonjour";</tag>
+  </rule>
+</grammar>

@@ -1,0 +1,8 @@
+{
+	"modules" : { 
+		"wikipedia"  : {
+			"description": "Permet de chercher la définition d'un mot",
+			"version": "0.1"
+		}
+	}
+}

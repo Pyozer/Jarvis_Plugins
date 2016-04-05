@@ -1,0 +1,11 @@
+{
+  "modules" : { 
+    "progtv2"  : {
+      "description" : "Programme TV",
+      "version" : "1.2",
+      "chaines_favoris" : "1, 6, 9, 10",
+      "bouquets_favoris" : "tnt",
+      "tous_les_bouquets" : "tnt, belgique-suisse, tnt-locale, generaliste, canal-tps, cinema, sport, information_documentaire, jeunesse, musique"
+    }
+  }
+}

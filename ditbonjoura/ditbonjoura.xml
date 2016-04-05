@@ -1,0 +1,17 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleditbonjoura" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleditbonjoura" scope="public">
+    <example>Jarvis dit bonjour Alex</example>
+    <tag>out.action=new Object(); </tag>
+
+    <item weight="2">Jarvis</item>
+    <one-of>
+        <item>dit bonjour a</item>
+        <item>bonjour</item>
+        <item>bonjour a</item>
+        <item>bonjour aux</item>
+    </one-of>
+    <ruleref special="GARBAGE" />
+    
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/ditbonjoura";</tag>
+  </rule>
+</grammar>

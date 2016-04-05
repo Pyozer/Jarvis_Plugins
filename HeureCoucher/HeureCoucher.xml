@@ -1,0 +1,129 @@
+﻿<grammar version="1.0" xml:lang="fr-FR" mode="voice"  root="ruleHeureCoucher" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleHeureCoucher" scope="public">
+    <example>Jarvis est-il l'heure de me coucher ?</example>
+    <tag>out.action=new Object(); </tag>
+    <item>Jarvis</item> 
+    <one-of>
+      <!-- Permet de savoir si il est l'heure de se coucher -->
+      <item>est il l'heure de se coucher<tag>out.action.time="checktime";</tag></item>
+      <item>il est l'heure de se coucher ou pas<tag>out.action.time="checktime";</tag></item>
+      <item>est il l'heure de me coucher<tag>out.action.time="checktime";</tag></item>
+      <item>il est l'heure de me coucher ou pas<tag>out.action.time="checktime";</tag></item>
+      <item>il est l'heure que je me coucher<tag>out.action.time="checktime";</tag></item>
+      <item>il est l'heure que je me coucher ou pas<tag>out.action.time="checktime";</tag></item>
+      <!-- Permet de récupérer l'heure de coucher -->
+      <item>a quel heure je dois me coucher<tag>out.action.time="gettimeforsleep";</tag></item>
+      <item>a quelle heure je dois me coucher<tag>out.action.time="gettimeforsleep";</tag></item>
+      <item>a quelle heure jdois me coucher<tag>out.action.time="gettimeforsleep";</tag></item>
+      <item>quelle est l'heure de coucher<tag>out.action.time="gettimeforsleep";</tag></item>
+      <!-- Défini l'heure du coucher -->
+      <item>définit mon heure de coucher pour<tag>out.action.time="settime";</tag></item>
+      <item>change mon heure de coucher pour<tag>out.action.time="settime";</tag></item>
+      <item>met mon heure de coucher pour<tag>out.action.time="settime";</tag></item>
+      <item>tu peux mon heure de coucher pour<tag>out.action.time="settime";</tag></item>
+      <item>définit mon heure de coucher a<tag>out.action.time="settime";</tag></item>
+      <item>change mon heure de coucher a<tag>out.action.time="settime";</tag></item>
+      <item>met mon heure de coucher a<tag>out.action.time="settime";</tag></item>
+      <item>tu peux mon heure de coucher a<tag>out.action.time="settime";</tag></item>
+    </one-of>
+    <!-- Si on veux définir l'heure de coucher -->
+    <item repeat="0-1">
+      <one-of>
+        <item>zéro<tag>out.action.tpshours='0';</tag></item>
+        <item>un<tag>out.action.tpshours='1';</tag></item>
+        <item>une<tag>out.action.tpshours='1';</tag></item>
+        <item>deux<tag>out.action.tpshours='2';</tag></item>
+        <item>trois<tag>out.action.tpshours='3';</tag></item>
+        <item>quatre<tag>out.action.tpshours='4';</tag></item>
+        <item>cinq<tag>out.action.tpshours='5';</tag></item>
+        <item>six<tag>out.action.tpshours='6';</tag></item>
+        <item>sept<tag>out.action.tpshours='7';</tag></item>
+        <item>huit<tag>out.action.tpshours='8';</tag></item>
+        <item>neuf<tag>out.action.tpshours='9';</tag></item>
+        <item>dix<tag>out.action.tpshours='10';</tag></item>
+        <item>onze<tag>out.action.tpshours='11';</tag></item>
+        <item>douze<tag>out.action.tpshours='12';</tag></item>
+        <item>treize<tag>out.action.tpshours='13';</tag></item>
+        <item>quatorze<tag>out.action.tpshours='14';</tag></item>
+        <item>quinze<tag>out.action.tpshours='15';</tag></item>
+        <item>seize<tag>out.action.tpshours='16';</tag></item>
+        <item>dix-sept<tag>out.action.tpshours='17';</tag></item>
+        <item>dix-huit<tag>out.action.tpshours='18';</tag></item>
+        <item>dix-neuf<tag>out.action.tpshours='19';</tag></item>
+        <item>vingt<tag>out.action.tpshours='20';</tag></item>
+        <item>vingt-et-un<tag>out.action.tpshours='21';</tag></item>
+        <item>vingt-deux<tag>out.action.tpshours='22';</tag></item>
+        <item>vingt-trois<tag>out.action.tpshours='23';</tag></item>
+      </one-of>
+    </item>
+
+    <item repeat="0-1">heure<tag>out.action.typetps='hours';</tag></item>
+    
+    <item repeat="0-1">
+      <one-of>
+        <item>zéro<tag>out.action.tpsminute='0';</tag></item>
+        <item>un<tag>out.action.tpsminute='1';</tag></item>
+        <item>une<tag>out.action.tpsminute='1';</tag></item>
+        <item>deux<tag>out.action.tpsminute='2';</tag></item>
+        <item>trois<tag>out.action.tpsminute='3';</tag></item>
+        <item>quatre<tag>out.action.tpsminute='4';</tag></item>
+        <item>cinq<tag>out.action.tpsminute='5';</tag></item>
+        <item>six<tag>out.action.tpsminute='6';</tag></item>
+        <item>sept<tag>out.action.tpsminute='7';</tag></item>
+        <item>huit<tag>out.action.tpsminute='8';</tag></item>
+        <item>neuf<tag>out.action.tpsminute='9';</tag></item>
+        <item>dix<tag>out.action.tpsminute='10';</tag></item>
+        <item>onze<tag>out.action.tpsminute='11';</tag></item>
+        <item>douze<tag>out.action.tpsminute='12';</tag></item>
+        <item>treize<tag>out.action.tpsminute='13';</tag></item>
+        <item>quatorze<tag>out.action.tpsminute='14';</tag></item>
+        <item>quinze<tag>out.action.tpsminute='15';</tag></item>
+        <item>seize<tag>out.action.tpsminute='16';</tag></item>
+        <item>dix-sept<tag>out.action.tpsminute='17';</tag></item>
+        <item>dix-huit<tag>out.action.tpsminute='18';</tag></item>
+        <item>dix-neuf<tag>out.action.tpsminute='19';</tag></item>
+        <item>vingt<tag>out.action.tpsminute='20';</tag></item>
+        <item>vingt-et-un<tag>out.action.tpsminute='21';</tag></item>
+        <item>vingt-deux<tag>out.action.tpsminute='22';</tag></item>
+        <item>vingt-trois<tag>out.action.tpsminute='23';</tag></item>
+        <item>vingt-quatre<tag>out.action.tpsminute='24';</tag></item>
+        <item>vingt-cinq<tag>out.action.tpsminute='25';</tag></item>
+        <item>vingt-six<tag>out.action.tpsminute='26';</tag></item>
+        <item>vingt-sept<tag>out.action.tpsminute='27';</tag></item>
+        <item>vingt-huit<tag>out.action.tpsminute='28';</tag></item>
+        <item>vingt-neuf<tag>out.action.tpsminute='29';</tag></item>
+        <item>trente<tag>out.action.tpsminute='30';</tag></item>
+        <item>trente-et-un<tag>out.action.tpsminute='31';</tag></item>
+        <item>trente-deux<tag>out.action.tpsminute='32';</tag></item>
+        <item>trente-trois<tag>out.action.tpsminute='33';</tag></item>
+        <item>trente-quatre<tag>out.action.tpsminute='34';</tag></item>
+        <item>trente-cinq<tag>out.action.tpsminute='35';</tag></item>
+        <item>trente-six<tag>out.action.tpsminute='36';</tag></item>
+        <item>trente-sept<tag>out.action.tpsminute='37';</tag></item>
+        <item>trente-huit<tag>out.action.tpsminute='38';</tag></item>
+        <item>trente-neuf<tag>out.action.tpsminute='39';</tag></item>
+        <item>quarante<tag>out.action.tpsminute='40';</tag></item>
+        <item>quarante-et-un<tag>out.action.tpsminute='41';</tag></item>
+        <item>quarante-deux<tag>out.action.tpsminute='42';</tag></item>
+        <item>quarante-trois<tag>out.action.tpsminute='43';</tag></item>
+        <item>quarante-quatre<tag>out.action.tpsminute='44';</tag></item>
+        <item>quarante-cinq<tag>out.action.tpsminute='45';</tag></item>
+        <item>quarante-six<tag>out.action.tpsminute='46';</tag></item>
+        <item>quarante-sept<tag>out.action.tpsminute='47';</tag></item>
+        <item>quarante-huit<tag>out.action.tpsminute='48';</tag></item>
+        <item>quarante-neuf<tag>out.action.tpsminute='49';</tag></item>
+        <item>cinquante<tag>out.action.tpsminute='50';</tag></item>
+        <item>cinquante-et-un<tag>out.action.tpsminute='51';</tag></item>
+        <item>cinquante-deux<tag>out.action.tpsminute='52';</tag></item>
+        <item>cinquante-trois<tag>out.action.tpsminute='53';</tag></item>
+        <item>cinquante-quatre<tag>out.action.tpsminute='54';</tag></item>
+        <item>cinquante-cinq<tag>out.action.tpsminute='55';</tag></item>
+        <item>cinquante-six<tag>out.action.tpsminute='56';</tag></item>
+        <item>cinquante-sept<tag>out.action.tpsminute='57';</tag></item>
+        <item>cinquante-huit<tag>out.action.tpsminute='58';</tag></item>
+        <item>cinquante-neuf<tag>out.action.tpsminute='59';</tag></item>
+      </one-of>
+    </item>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/HeureCoucher";</tag>
+  </rule>
+</grammar>

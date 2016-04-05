@@ -1,0 +1,12 @@
+{
+  "modules": { 
+    "raspberry": {
+      "description": "Jarvis peut gérer l'allumage de led du raspberry",
+      "iprasp": "192.168.0.16",
+      "devmode": "true",
+      "time": "0.2",
+      "boucle": "10",
+      "version": "1.0"
+    }
+  }
+}
