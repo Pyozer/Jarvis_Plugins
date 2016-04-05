@@ -1,0 +1,8 @@
+{
+  "modules" : { 
+    "citation"  : {
+      "description": "Donne la citation du jour",
+      "version"    : "1.0"
+    }
+  }
+}

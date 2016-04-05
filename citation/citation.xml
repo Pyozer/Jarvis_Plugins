@@ -1,0 +1,31 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice"  root="rulecitation" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulecitation">
+    <tag>out.action=new Object(); </tag>
+
+    <item weight="2">Jarvis</item>
+
+    <one-of>
+		<item>dit moi la citation</item>
+		<item>quel est la citation</item>
+		<item>tu peux me dire la citation</item>
+		<item>tu peux me dire quel est la citation</item>
+		<item>tu peux dire quel est la citation</item>
+		<item>tu peux dire c'est quoi la citation</item>
+		<item>c'est quoi la citation</item>
+
+        <item>dit moi une autre citation<tag>out.action.other="true";</tag></item>
+        <item>une autre citation<tag>out.action.other="true";</tag></item>
+        <item>tu peux me dire une autre citation<tag>out.action.other="true";</tag></item>
+        <item>tu peux dire une autre citation<tag>out.action.other="true";</tag></item>
+    </one-of>
+    <item repeat="0-1">
+    	<one-of>
+    		<item>d'aujourd'hui</item>
+    		<item>du jour</item>
+            <item>aujourd'hui</item>
+    	</one-of>
+    </item>
+    
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/citation";</tag>
+  </rule>
+</grammar>
