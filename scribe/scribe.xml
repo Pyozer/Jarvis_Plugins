@@ -5,14 +5,10 @@
 
 	<item>Jarvis</item>
 	<one-of>
-		<item>relance le scribe
-			<tag>out.action._attributes.tts="Ok . Le scribe sera prêt dans quelques secondes ..."; out.action.action="relaunch";</tag>
-		</item>
-		<item>rafraichit
-			<tag>out.action.action="refresh";</tag>
-		</item>
-
+		<item>relance le scribe<tag>out.action._attributes.tts="Ok.Le scribe sera prêt dans quelques secondes";out.action.action="relaunch";</tag></item>
+		<item>rafraichit<tag>out.action.action="refresh";</tag></item>
 	</one-of>
+
 	<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/scribe";</tag>
 </rule>
 </grammar>
