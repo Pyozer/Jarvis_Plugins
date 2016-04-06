@@ -71,7 +71,7 @@ function decodeScribe(search, callback) {
 	}
 
 	// on peut maintenant s'occuper des mots qui sont recherchés
-	search = match[2];
+	search = match[2].replace(/(via|par|grace)/i, '').replace(/wikip(e|é)dia/i, '').trim();
 	return Wiki(search, callback);
 }
 

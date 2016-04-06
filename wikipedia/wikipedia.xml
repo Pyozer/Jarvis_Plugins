@@ -13,7 +13,18 @@
 			<item>définir le mot</item>
 			<item>tu peux définir le mot</item>
 		</one-of>
+		
 		<ruleref special="GARBAGE" />
+
+		<item repeat="0-1">
+			<one-of>
+				<item>via</item>
+				<item>sur</item>
+				<item>par</item>
+				<item>grace a</item>
+			</one-of>
+		</item>
+		<item>wikipedia</item>
 		
 		<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/wikipedia";</tag>
 	</rule>
