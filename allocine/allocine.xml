@@ -48,14 +48,14 @@
 <rule id="ruleMovieName">
   <tag>out.place="P1346";</tag>
   <one-of>
-    <item>Batman v Superman <tag>out.movie="0";</tag></item>
-    <item>Kung Fu Panda 3<tag>out.movie="1";</tag></item>
-    <item>The Revenant<tag>out.movie="2";</tag></item>
-    <item>Encore heureux<tag>out.movie="3";</tag></item>
-    <item>Les espi�gles<tag>out.movie="4";</tag></item>
-    <item>Les Ogres<tag>out.movie="5";</tag></item>
-    <item>Room<tag>out.movie="6";</tag></item>
-    <item>Suite Armoricaine<tag>out.movie="7";</tag></item>
+    <item>Gros pois et Petit point<tag>out.movie="0";</tag></item>
+    <item>Batman v Superman <tag>out.movie="1";</tag></item>
+    <item>Gods of Egypt<tag>out.movie="2";</tag></item>
+    <item>Kung Fu Panda 3<tag>out.movie="3";</tag></item>
+    <item>Les Visiteurs - La R�volution<tag>out.movie="4";</tag></item>
+    <item>Spotlight<tag>out.movie="5";</tag></item>
+    <item>�perdument<tag>out.movie="6";</tag></item>
+    <item>Le Fant�me de Canterville<tag>out.movie="7";</tag></item>
   </one-of>
 </rule>
 <!-- § Automatic Generation -->

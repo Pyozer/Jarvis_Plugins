@@ -4,7 +4,8 @@
 
 exports.action = function(data, callback){
   // Si on utilise Scribe
-  //SARAH.context.scribe.activePlugin('CaVa');
+  SARAH.context.scribe.activePlugin('CaVa');
+  
   var config = Config.modules.cava;
   var name = config.votre_prenom;
   var reponses = [
