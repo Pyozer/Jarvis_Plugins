@@ -3,7 +3,7 @@
 		"scribe"  : {
 			"description": "Utilisation de la reconnaissance vocale HTML5 (avec Chrome)",
 			"version": "1.0",
-			"port_https": 4300,
+			"port_http": 4300,
 			"autorun_browser": true,
 			"kill_browser_on_startup": false,
 			"maxReco": 10,

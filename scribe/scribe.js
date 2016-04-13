@@ -616,7 +616,7 @@ exports.init = function(SARAH) {
 
 
     var fs = require('fs');
-    var https = require('https');
+    //var https = require('https');
     var express = require('express');
     var util = require('util');
 
@@ -633,10 +633,10 @@ exports.init = function(SARAH) {
     // on s'assure que le micro est allumé ...
     microMute(0, undefined, true);
 
-    // port HTTPS -- à changer selon les ports disponibles
-    var port_https = maConfig.port_https;
+    // port HTTP -- à changer selon les ports disponibles
+    var port_http = maConfig.port_http;
 
-    console.log("Préparation du Serveur HTTPS sur le port " + port_https);
+    console.log("Préparation du Serveur HTTP sur le port " + port_http);
     var app = express();
     // par défaut les pages sont dans STATIC
     app.use(express.static(__dirname + '/static'));
@@ -681,6 +681,7 @@ exports.init = function(SARAH) {
         } else {
             var params;
             var request = require('request');
+            var cheerio = require('cheerio');
 
             if (typeof req.query.reco !== 'undefined') {
                 txt = req.query.reco;
@@ -700,6 +701,7 @@ exports.init = function(SARAH) {
                     partial: decodeURI(txt),
                     confidence: req.query.confidence
                 };
+                var reco_complete = false;
             }
             res.write(msg);
             console.log(msg);
@@ -709,11 +711,14 @@ exports.init = function(SARAH) {
             if (v4) sarahConfig = Config.http;
             else sarahConfig = SARAH.ConfigManager.getConfig().http;
             var url_serveur_sarah = "http://" + sarahConfig.ip + ":" + sarahConfig.port + "/sarah/scribe";
-            request({
-                    url: url_serveur_sarah,
-                    qs: params
-                },
-                function(err, response, body) {
+
+            if(req.query.source) {
+            	var timeoutDuration = 2000;
+            } else {
+            	var timeoutDuration = 1;
+            }
+            var timeout = setTimeout(function() {
+                request({ url: url_serveur_sarah, qs: params }, function(err, response, body) {
                     if (err || response.statusCode != 200) {
                         res.write("Erreur: " + err);
                         console.log("Erreur: " + err);
@@ -730,22 +735,23 @@ exports.init = function(SARAH) {
                         */
                     }
                     res.end('</body></html>');
-                }
-            );
-
-
+                });
+            }, timeoutDuration);
         }
 
     });
 
 
     // création du serveur HTTPS
-    https.createServer({
+    /*https.createServer({
         key: fs.readFileSync(__dirname + '/key.pem'),
         cert: fs.readFileSync(__dirname + '/cert.pem')
-    }, app).listen(port_https);
+    }, app).listen(port_https);*/
 
-    console.log("Serveur HTTPS en écoute sur le port " + port_https);
+    var http = require("http");
+    http.createServer(app).listen(port_http);
+
+    console.log("Serveur HTTP en écoute sur le port " + port_http);
 
     if (maConfig.autorun_browser == true) {
         autorun_browser(maConfig.kill_browser_on_startup);
@@ -794,7 +800,7 @@ function autorun_browser(kill) {
     if (kill == true) {
         var proc = __nircmd + 'closeprocess chrome.exe';
     } else {
-        var proc = 'start chrome https://127.0.0.1:4300';
+        var proc = 'start chrome http://127.0.0.1:4300';
     }
     //  console.log(proc);
     var child = exec(proc, function(error, stdout, stderr) {

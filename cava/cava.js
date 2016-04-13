@@ -4,8 +4,7 @@
 
 exports.action = function(data, callback){
   // Si on utilise Scribe
-  SARAH.context.scribe.activePlugin('CaVa');
-  
+  //SARAH.context.scribe.activePlugin('CaVa');
   var config = Config.modules.cava;
   var name = config.votre_prenom;
   var reponses = [
@@ -44,7 +43,8 @@ exports.action = function(data, callback){
           var choix = Math.floor(Math.random() * reponses4Bad.length);
           var answer4Bad = reponses4Bad[choix];
 
-          SARAH.speak(answer4Bad);
+          //SARAH.speak(answer4Bad);
+          callback({ 'tts': answer4Bad });
       } else {
           var reponses4Good = [
             "Super",
@@ -57,10 +57,11 @@ exports.action = function(data, callback){
           var choix = Math.floor(Math.random() * reponses4Good.length);
           var answer4Good = reponses4Good[choix];
 
-          SARAH.speak(answer4Good);
+          //SARAH.speak(answer4Good);
+          callback({ 'tts': answer4Good });
       }
       end();
   });
 
-  callback();
+  //callback();
 }

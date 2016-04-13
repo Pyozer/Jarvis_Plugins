@@ -47,8 +47,8 @@ function checkScribe(event, action, callback) {
 			decodeScribe(SARAH.context.scribe.lastPartial, callback);
 		} else {
 			SARAH.context.scribe.activePlugin('Aucun (DitBonjourA)');
-			ScribeSpeak("Désolé je n'ai pas compris. Merci de réessayer.", true);
-			return callback();
+			//ScribeSpeak("Désolé je n'ai pas compris. Merci de réessayer.", true);
+			return callback({ 'tts': "Désolé je n'ai pas compris. Merci de réessayer." });
 		}
 	} else {
 		// pas traité
@@ -63,8 +63,8 @@ function decodeScribe(search, callback) {
 
 	if (!match || match.length <= 1){
 		console.log("FAIL");
-		ScribeSpeak("Je ne comprends pas");
-		callback();
+		//ScribeSpeak("Je ne comprends pas");
+		callback({ 'tts': "Je ne comprends pas" });
 		return;
 	}
 
@@ -81,7 +81,7 @@ function tellhello(callback, determinant, person) {
 		var prefix = "";
 	}
 
-	ScribeSpeak("Bonjour " + prefix + person);
-	callback();
+	//ScribeSpeak("Bonjour " + prefix + person);
+	callback({ 'tts': "Bonjour " + prefix + person });
 	return;
 }

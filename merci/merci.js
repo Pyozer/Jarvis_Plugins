@@ -16,12 +16,12 @@ exports.action = function(data, callback){
 	var name = config.name;
 
 	var answers = new Array(
-		"Mais de rien" + name,
+		"Mais de rien " + name,
 		"ça me fait plaisir",
 		"Hé ouais, je gère !",
-		"Tu sais" + name + ", je suis ton plus fidèle serviteur",
-		"Ouais ouais" + name  + "mais tabitue pas trop",
-		"Ah! Enfin. Jai failli attendre",
+		"Tu sais " + name + ", je suis ton plus fidèle serviteur",
+		"Ouais ouais " + name  + " mais t'habitue pas trop",
+		"Ah ! Enfin. J'ai failli attendre",
 		"J'ai pas trop le choix",
 		"ça me fait très plaisir " + name,
 		"Dé nada"

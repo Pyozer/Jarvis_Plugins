@@ -47,8 +47,8 @@ function checkScribe(event, action, callback) {
 			decodeScribe(SARAH.context.scribe.lastPartial, callback);
 		} else {
 			SARAH.context.scribe.activePlugin('Aucun (Wikipedia)');
-			ScribeSpeak("Désolé je n'ai pas compris. Merci de réessayer.", true);
-			return callback();
+			//ScribeSpeak("Désolé je n'ai pas compris. Merci de réessayer.", true);
+			return callback({ 'tts': "Désolé je n'ai pas compris. Merci de réessayer." });
 		}
 	} else {
 		// pas traité
@@ -65,8 +65,8 @@ function decodeScribe(search, callback) {
 	var match = search.match(rgxp);
 	if (!match || match.length <= 1){
 		console.log("FAIL");
-		ScribeSpeak("Je ne comprends pas");
-		callback();
+		//ScribeSpeak("Je ne comprends pas");
+		callback({ 'tts': "Je ne comprends pas" });
 		return;
 	}
 
@@ -88,8 +88,8 @@ function Wiki(search, callback){
 	if(typeof file_content[search] != 'undefined' && file_content[search] != "") {
 		var infos = file_content[search];
 		console.log("Informations: " + infos);
-		ScribeSpeak(infos);
-		callback();
+		//ScribeSpeak(infos);
+		callback({ 'tts': infos });
 		return;
 
 	} else {
@@ -98,8 +98,8 @@ function Wiki(search, callback){
 		request({ 'uri' : url, 'json' : true }, function (err, response, body) {
 			
 		    if (err || response.statusCode != 200) {
-				ScribeSpeak("L'action a échoué. Erreur " + response.statusCode);
-				callback();
+				//ScribeSpeak("L'action a échoué. Erreur " + response.statusCode);
+				callback({ 'tts': "L'action a échoué. Erreur " + response.statusCode });
 				return;
 		    }
 		    
@@ -107,8 +107,8 @@ function Wiki(search, callback){
 		    var extract = getFirst(body.query.pages).extract;
 			
 			if(!extract) {
-				ScribeSpeak("Je n'ai rien trouvé sur Wikipédia pour " + search);
-				callback();
+				//ScribeSpeak("Je n'ai rien trouvé sur Wikipédia pour " + search);
+				callback({ 'tts': "Je n'ai rien trouvé sur Wikipédia pour " + search });
 				return;
 			}
 			// On supprime les balises html
@@ -119,8 +119,8 @@ function Wiki(search, callback){
 		    txt = txt.split('. ')[0] + '.';
 
 		    if(txt.length < 1) {
-		    	ScribeSpeak("L'action a échoué");
-		    	callback();
+		    	//ScribeSpeak("L'action a échoué");
+		    	callback({ 'tts': "L'action a échoué" });
 		    } else {
 		    	file_content[search] = txt;
 	        	chaine = JSON.stringify(file_content, null, '\t');
@@ -129,8 +129,8 @@ function Wiki(search, callback){
 				});
 
 		    	console.log('Résultat: ' + txt);
-		    	ScribeSpeak(txt);
-		    	callback();
+		    	//ScribeSpeak(txt);
+		    	callback({ 'tts': txt });
 		    }
 		    return;
 		});
